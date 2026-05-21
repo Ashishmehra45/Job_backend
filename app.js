@@ -26,6 +26,7 @@ app.use(
       "http://localhost:3001",
       "http://localhost:3002",
       "http://localhost:3004",
+      "https://job-frontend-4691.onrender.com",
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -34,10 +35,10 @@ app.use(
 );
 
 // ================= ROUTES =================
-app.use("/auth", authRoutes);
-app.use("/admin", adminRoutes);
-app.use("/provider", providerRoutes);
-app.use("/user", userRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/admin", adminRoutes);
+app.use("/api/provider", providerRoutes);
+app.use("/api/user", userRoutes);
 
 // ================= HOME ROUTE =================
 app.get("/", (req, res) => {
