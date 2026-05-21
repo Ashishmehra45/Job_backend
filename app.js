@@ -6,6 +6,9 @@ const authRoutes = require("./routes/auth");
 const adminRoutes = require("./routes/admin");
 const providerRoutes = require("./routes/provider");
 const userRoutes = require("./routes/user");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
 
@@ -59,7 +62,7 @@ mongoose.set("strictQuery", true);
 
 mongoose
   .connect(
-    "mongodb://ashishmehra_db:RQcTw5ZNaWHnyC1h@ac-hhcovfx-shard-00-00.nbicsjk.mongodb.net:27017,ac-hhcovfx-shard-00-01.nbicsjk.mongodb.net:27017,ac-hhcovfx-shard-00-02.nbicsjk.mongodb.net:27017/job_portal?ssl=true&replicaSet=atlas-12kbym-shard-0&authSource=admin&appName=Cluster0"
+    process.env.MONGO_URI 
   )
   .then(() => {
     console.log("MongoDB Connected ✅");
