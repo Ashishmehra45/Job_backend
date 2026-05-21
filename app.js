@@ -26,7 +26,7 @@ app.use(
       "http://localhost:3001",
       "http://localhost:3002",
       "http://localhost:3004",
-      "https://job-frontend-4691.onrender.com",
+      "https://job-frontend-two.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
